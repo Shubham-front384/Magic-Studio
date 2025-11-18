@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+html, body {
+  background: #1a1a1a;
+  color: #fafafa;
+  overflow-x: hidden;
+  font-family: "Oswald", sans-serif;
+}
+
+.carousel::-webkit-scrollbar, .carousel1::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  animation: scrollLeft 10s infinite linear;
+}
+
+.card {
+  flex: 0 0 7em;
+}
+
+/* Feature Work */
+.feature-detail-page {
+  display: grid;
+  grid-template-areas: 'box1'
+                       'box2'
+                       'box3'
+                       'box4';
+}
+
+.box1 {
+  grid-area: box1;
+}
+
+.box2 {
+  grid-area: box2;
+}
+
+.box3 {
+  grid-area: box3;
+}
+
+.box4 {
+  grid-area: box4;
+}
+
+/* Features1 Details */
+.card1 {
+  flex: 0 0 15em;
+}
+
+@keyframes scrollLeft {
+  from {translate: 10%;}
+  to {translate: -100%;}
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 0 0 16em;
+  }
+
+  .card1 {
+    flex: 0 0 30em;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Feature Work */
+  .feature-detail-page {
+    display: grid;
+    grid-template-areas: 'box1 box2'
+                        'box3 box4';
+  }
+}
